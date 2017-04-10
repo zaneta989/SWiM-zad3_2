@@ -1,9 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.zaneta.zad3_2.Wprowadzanie">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tekst1" />
+
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView android:text="@string/tekst3" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textOff="@string/tekst19"
+            android:textOn="@string/tekst18" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView30"
+            android:text="@string/imie" />
+
+        <EditText
+            android:id="@+id/editText30"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Jan Nowak" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:text="@string/tekst6" />
+
+        <EditText
+            android:id="@+id/editText11"
+            android:ems="10"
+            android:inputType="number"
+            android:text="65" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:text="@string/tekst7" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:ems="10"
+            android:inputType="number"
+            android:text="21" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:text="@string/tekst2" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:ems="10"
+            android:inputType="number"
+            android:text="170" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:text="@string/tekst8" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="4"
+            android:progress="1" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/textView12"
+            android:text="@string/tekst22" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tekst9" />
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tekst10" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/tekst11" />
+
+        </RadioGroup>
+
+    </TableRow>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:text="@string/tekst14" />
+
+    <Button
+        android:id="@+id/button3"
+        android:text="@string/tekst17"
+        android:onClick="zapisz"
+
+        />
+
+</TableLayout>

@@ -4,5 +4,20 @@
     <string name="przyciskWpr">Wprowadzanie danych</string>
     <string name="przyciskL">Lista</string>
     <string name="tekstPowitalny" />
+    <string name="tekst1">Wprowadź dane.</string>
+    <string name="tekst6">Masa ciała (kg) </string>
+    <string name="tekst7">Wiek (lata)</string>
+    <string name="tekst2">Wzrost (cm)</string>
+    <string name="tekst3">Płeć</string>
+    <string name="tekst8">Aktywność fizyczna</string>
+    <string name="tekst9">Schudnąc</string>
+    <string name="tekst10">Przytyc</string>
+    <string name="tekst11">Utrzymać wagę</string>
+    <string name="tekst14" />
+    <string name="tekst17">Zapisz</string>
+    <string name="tekst18">Kobieta</string>
+    <string name="tekst19">Mężczyzna</string>
+    <string name="tekst22">Planuje</string>
+    <string name="imie">Imie i nazwisko</string>
 
 </resources>
