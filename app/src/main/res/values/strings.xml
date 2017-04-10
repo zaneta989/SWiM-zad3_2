@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">zad3_2</string>
+    <string name="app_name">Aplikacja</string>
+    <string name="przyciskUst">Ustawienia aplikacji</string>
+    <string name="przyciskWpr">Wprowadzanie danych</string>
+    <string name="przyciskL">Lista</string>
+    <string name="tekstPowitalny" />
+
 </resources>
