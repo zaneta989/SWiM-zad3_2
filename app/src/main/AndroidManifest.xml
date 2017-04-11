@@ -19,7 +19,9 @@
         <activity android:name=".Ustawienia" />
         <activity android:name=".Wprowadzanie" />
         <activity android:name=".Lista" />
-        <activity android:name=".ListaProsta"></activity>
+        <activity android:name=".ListaProsta" />
+        <activity android:name=".DaneSzczegulowe" />
+        <activity android:name=".PelneDane"></activity>
     </application>
 
 </manifest>

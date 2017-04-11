@@ -24,4 +24,8 @@ public class MainActivity extends AppCompatActivity {
         final Intent intencja2 = new Intent(this,Lista.class);
         startActivity(intencja2);
     }
+    public void wlaczListeP(View view) {
+        final Intent intencja2 = new Intent(this,ListaProsta.class);
+        startActivity(intencja2);
+    }
 }
