@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Ustawienia" />
         <activity android:name=".Wprowadzanie" />
-        <activity android:name=".Lista"></activity>
+        <activity android:name=".Lista" />
+        <activity android:name=".ListaProsta"></activity>
     </application>
 
 </manifest>

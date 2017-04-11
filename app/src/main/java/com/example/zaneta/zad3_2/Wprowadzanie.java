@@ -38,13 +38,13 @@ public class Wprowadzanie extends AppCompatActivity {
         String masaCiala_string = masaCiala.getText().toString();
         String wiek_string = wiek.getText().toString();
         String wzrost_string = wzrost.getText().toString();
-        String aktF_string = Integer.toString(aktywnoscFizyczna.getProgress())+"/4";
+        String aktF_string = (String) (Integer.toString(aktywnoscFizyczna.getProgress())+"/4");
         String planuje_string = (String) ((RadioButton) findViewById(planuje.getCheckedRadioButtonId())).getText();
-       // Osoba os= new Osoba(czyKobieta_string, imieN_string, masaCiala_string, wiek_string, wzrost_string, aktywnoscFizyczna, planuje_string);
-        String od=czyKobieta_string+imieN_string+ masaCiala_string+ wiek_string+wzrost_string+ aktywnoscFizyczna+planuje_string;
+       Osoba os= new Osoba(czyKobieta_string, imieN_string, masaCiala_string, wiek_string, wzrost_string, aktF_string, planuje_string);
+        //String od=czyKobieta_string+imieN_string+ masaCiala_string+ wiek_string+wzrost_string+ aktywnoscFizyczna+planuje_string;
         try {
             daneZapisane = openFileOutput(nazwa_pliku, Context.MODE_PRIVATE);
-            daneZapisane.write(od.getBytes());
+            daneZapisane.write(os.toString().getBytes());
             daneZapisane.close();
         } catch (Exception e) {
             e.printStackTrace();
