@@ -66,7 +66,7 @@ public class Lista extends AppCompatActivity {
         {
             os=listaO.get(i);
             listaI[i]=os.getImieN();
-            listaW[i]=os.getWiek();
+            listaW[i]=os.getWiek()+ " lat";
             pl[i]=os.getPlec();
 
         }
