@@ -2,6 +2,7 @@ package com.example.zaneta.zad3_2;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -69,7 +70,21 @@ public class ListaProsta extends AppCompatActivity implements AdapterView.OnItem
     }
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {
-        Toast.makeText(this.getApplicationContext(), lista[position], Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this.getApplicationContext(), lista[position], Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(this, PelneDane.class);
+        i.putExtras(pobierzDane(listaO.get(position)));
+        startActivityForResult(i, 123);
     }
-
+    public Bundle pobierzDane(Osoba os)
+    {
+        Bundle dane = new Bundle();
+        dane.putString("czyKobieta", os.getPlec());
+        dane.putString("imieN",  os.getImieN());
+        dane.putString("masaCiala",  os.getMasaCiala());
+        dane.putString("wiek", os.getWiek());
+        dane.putString("wzrost",  os.getWzrost());
+        dane.putString("aktywnoscFizyczna", os.getAktywnoscFizyczna());
+        dane.putString("planuje",  os.getPlanuje());
+        return dane;
+    }
 }
