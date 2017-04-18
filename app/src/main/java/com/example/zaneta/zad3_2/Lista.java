@@ -26,7 +26,7 @@ public class Lista extends AppCompatActivity {
     String [] listaW;
     String [] pl;
     List <Osoba>listaO = new ArrayList<Osoba>();
-    String nazwa_pliku = "daneOs";
+    String nazwa_pliku = "daneOs.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

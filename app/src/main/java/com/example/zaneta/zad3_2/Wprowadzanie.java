@@ -1,6 +1,8 @@
 package com.example.zaneta.zad3_2;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,21 +10,30 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 
 public class Wprowadzanie extends AppCompatActivity {
 
-    String nazwa_pliku = "daneOs";
+    String nazwa_pliku = "daneOs.txt";
     FileOutputStream daneZapisane;
-
+    SharedPreferences dane;
+    String nazwa_plikuS="ustawienia";
+    Writer out;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wprowadzanie);
+
+        dane=getSharedPreferences(nazwa_plikuS, MODE_PRIVATE);
     }
-    public void zapisz( View view)
+    public void zapisz1( View view)
     {
         ToggleButton czyKobieta = (ToggleButton) findViewById(R.id.toggleButton);
         EditText imieN = (EditText) findViewById(R.id.editText30);
@@ -50,5 +61,27 @@ public class Wprowadzanie extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    protected void onStart()
+    {
+        super.onStart();
+        TextView tekst = (TextView) findViewById(R.id.textView6);
+        tekst.setTextSize(dane.getInt("wielkosc",12));
+        tekst = (TextView) findViewById(R.id.textView40);
+        tekst.setTextSize(dane.getInt("wielkosc",12));
+        tekst = (TextView) findViewById(R.id.textView30);
+        tekst.setTextSize(dane.getInt("wielkosc",12));
+        tekst = (TextView) findViewById(R.id.textView11);
+        tekst.setTextSize(dane.getInt("wielkosc",12));
+        tekst = (TextView) findViewById(R.id.textView3);
+        tekst.setTextSize(dane.getInt("wielkosc",12));
+        tekst = (TextView) findViewById(R.id.textView);
+        tekst.setTextSize(dane.getInt("wielkosc",12));
+        tekst = (TextView) findViewById(R.id.textView8);
+        tekst.setTextSize(dane.getInt("wielkosc",12));
+        tekst = (TextView) findViewById(R.id.textView12);
+        tekst.setTextSize(dane.getInt("wielkosc",12));
+    }
+    public void powrot(View view) { onBackPressed();}
 
 }

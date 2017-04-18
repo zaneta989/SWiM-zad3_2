@@ -21,13 +21,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListaProsta extends AppCompatActivity implements AdapterView.OnItemClickListener{
     String[] lista ;
     List <Osoba>listaO = new ArrayList<Osoba>();
-    String nazwa_pliku = "daneOs";
+    String nazwa_pliku = "daneOs.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +76,7 @@ public class ListaProsta extends AppCompatActivity implements AdapterView.OnItem
         i.putExtras(pobierzDane(listaO.get(position)));
         startActivityForResult(i, 123);
     }
+
     public Bundle pobierzDane(Osoba os)
     {
         Bundle dane = new Bundle();

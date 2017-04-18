@@ -17,7 +17,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <TextView android:text="@string/tekst3" />
+        <TextView
+            android:text="@string/tekst3"
+            android:id="@+id/textView40"/>
 
         <ToggleButton
             android:id="@+id/toggleButton"
@@ -153,16 +155,15 @@
         </RadioGroup>
 
     </TableRow>
+    <TableRow>
 
-    <TextView
-        android:id="@+id/textView13"
-        android:text="@string/tekst14" />
+        <Button
+            android:id="@+id/button3"
+            android:text="@string/tekst17"
+            android:onClick="zapisz1"
 
-    <Button
-        android:id="@+id/button3"
-        android:text="@string/tekst17"
-        android:onClick="zapisz"
+            />
 
-        />
+    </TableRow>
 
 </TableLayout>

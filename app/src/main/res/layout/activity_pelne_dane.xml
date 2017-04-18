@@ -23,6 +23,7 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/textView40"
             android:text="@string/tekst3"
             android:textSize="22sp"/>
 
